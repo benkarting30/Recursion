@@ -1,4 +1,4 @@
-let size
+let size; let level = 10
 function setup(){
     createCanvas(400, 400, WEBGL)
     size = width/2
@@ -7,28 +7,34 @@ function setup(){
 function draw(){
     background(220)
     orbitControl()
-    let s =size/3
-    FileList(255)
-    for (let i = -1; i<2; i++){
-        for (let j=-1; j<2; j++){
-            for(let k=-1; k<2; k++){
-                let x = i*s
-                let y = j*s
-                let z = k*s
-                if ((i==0&&j==0) ||
-                (i==0 && k==0) ||
-                (j==0 && k==0)){
+    MengerSponge(size, level)
+}
 
-                }else{
-                    push()
-                    translate(x,y,z)
-                    box(s)
-                    pop() 
-                }              
+function MengerSponge(size, level){
+    if(level == 0){
+        box(size)
+
+    } else {
+        let s =size/3
+        fill(255)
+        for (let i = -1; i<2; i++){
+            for (let j=-1; j<2; j++){
+                for(let k=-1; k<2; k++){
+                    let x = i*s
+                    let y = j*s
+                    let z = k*s
+                    if ((i==0&&j==0) ||
+                    (i==0 && k==0) ||
+                    (j==0 && k==0)){
+    
+                    }else{
+                        push()
+                        translate(x,y,z)
+                        MengerSponge(s, level-1)
+                        pop() 
+                    }              
+                }
             }
         }
     }
-
-    noFill()
-    box(size)
 }
