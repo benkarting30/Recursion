@@ -7,13 +7,18 @@ function setup(){
 function draw(){
     background(220)
     orbitControl()
-
+    let s =size/3
     for (let i = -1; i<2; i++){
-        let s =size/3
-        let x = i*s
-        let y = 0
-        translate(x,y)
-        box(s)
+        for (let j=-1; j<2; j++){
+            for(let k=-1; k<2; k++){
+                let x = i*s
+                let y = 0
+                push()
+                translate(x,y)
+                box(s)
+                pop()               
+            }
+        }
     }
 
     noFill()
