@@ -1,4 +1,4 @@
-let size; let level = 10
+let size; let level = 3
 function setup(){
     createCanvas(400, 400, WEBGL)
     size = width/2
