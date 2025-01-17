@@ -1,6 +1,6 @@
 let size
 function setup(){
-    CreateCanvas(400, 400, WEBGL)
+    createCanvas(400, 400, WEBGL)
     size = width/2
 }
 
