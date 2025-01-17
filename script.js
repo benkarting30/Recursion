@@ -6,7 +6,7 @@ function setup(){
 
 function draw(){
     background(220)
-    orbitControll()
+    orbitControl()
     noFill()
     box(size)
 }
