@@ -10,6 +10,9 @@ function draw(){
 
     for (let i = -1; i<2; i++){
         let s =size/3
+        let x = i*s
+        let y = 0
+        translate(x,y)
         box(s)
     }
 
