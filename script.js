@@ -12,9 +12,10 @@ function draw(){
         for (let j=-1; j<2; j++){
             for(let k=-1; k<2; k++){
                 let x = i*s
-                let y = 0
+                let y = j*s
+                let z = k*s
                 push()
-                translate(x,y)
+                translate(x,y,z)
                 box(s)
                 pop()               
             }
