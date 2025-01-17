@@ -14,10 +14,16 @@ function draw(){
                 let x = i*s
                 let y = j*s
                 let z = k*s
-                push()
-                translate(x,y,z)
-                box(s)
-                pop()               
+                if ((i==0&&j==0) ||
+                (i==0 && k==0) ||
+                (j==0 && k==0)){
+
+                }else{
+                    push()
+                    translate(x,y,z)
+                    box(s)
+                    pop() 
+                }              
             }
         }
     }
