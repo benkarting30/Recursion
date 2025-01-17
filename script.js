@@ -8,6 +8,7 @@ function draw(){
     background(220)
     orbitControl()
     let s =size/3
+    FileList(255)
     for (let i = -1; i<2; i++){
         for (let j=-1; j<2; j++){
             for(let k=-1; k<2; k++){
