@@ -7,6 +7,12 @@ function setup(){
 function draw(){
     background(220)
     orbitControl()
+
+    for (let i = -1; i<2; i++){
+        let s =size/3
+        box(s)
+    }
+
     noFill()
     box(size)
 }
